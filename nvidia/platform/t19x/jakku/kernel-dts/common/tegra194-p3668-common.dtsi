@@ -233,7 +233,7 @@
 	};
 
 	pfsd {
-		pwm_polarity= <PWM_POLARITY_NORMAL>;
+		pwm_polarity= <PWM_POLARITY_INVERTED>;
 		suspend_state = <0>;
 	};
 
