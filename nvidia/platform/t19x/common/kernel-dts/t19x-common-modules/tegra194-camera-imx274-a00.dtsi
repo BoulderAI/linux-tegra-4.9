@@ -61,9 +61,9 @@
 		};
 	};
 
-	i2c@3180000 {
-		tca9546@70 {
-			i2c@0 {
+	i2c@c240000 {
+//		tca9546@70 {
+//			i2c@0 {
 			imx274_a@1a {
 				compatible = "nvidia,imx274";
 				/* I2C device address */
@@ -385,8 +385,8 @@
 						};
 					};
 				};
-			};
-		};
+//			};
+//		};
 	};
 	lens_imx274@A6V26 {
 		min_focus_distance = "0.0";
@@ -456,9 +456,9 @@
 					/* Declare PCL support driver (classically known as guid)  */
 					pcl_id = "v4l2_sensor";
 					/* Driver v4l2 device name */
-					devname = "imx274 30-001a";
+					devname = "imx274 1-001a";
 					/* Declare the device-tree hierarchy to driver instance */
-					proc-device-tree = "/proc/device-tree/i2c@3180000/tca9546@70/i2c@0/imx274_a@1a";
+					proc-device-tree = "/proc/device-tree/i2c@c240000/imx274_a@1a";
 				};
 				drivernode1 {
 					/* Declare PCL support driver (classically known as guid)  */
