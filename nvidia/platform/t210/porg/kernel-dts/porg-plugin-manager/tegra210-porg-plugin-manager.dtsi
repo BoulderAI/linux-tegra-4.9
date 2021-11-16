@@ -295,12 +295,12 @@
 					isp_bw_margin_pct = <25>;
 				};
 			};
-			override@16 {
+			/*override@16 {
 				target = <&cam_module1>;
 				_overlay_ {
 					status = "disabled";
 				};
-			};
+			};*/
 		};
 
 		fragement@10 {
@@ -343,7 +343,7 @@
 				};
 			};
 			/* IMX219 dual sensor module */
-			override@4 {
+			/*override@4 {
 				target = <&imx219_cam0>;
 				_overlay_ {
 					status = "okay";
@@ -407,7 +407,7 @@
 					proc-device-tree = "/proc/device-tree/lens_imx219@RBPCV2/";
 				};
 			};
-			/* Enable VI ports */
+			// Enable VI ports
 			override@12 {
 				target = <&vi_base>;
 				_overlay_ {
@@ -444,7 +444,7 @@
 					remote-endpoint = <&rbpcv2_imx219_csi_out1>;
 				};
 			};
-			/* Enable CSI ports */
+			// Enable CSI ports
 			override@17 {
 				target = <&csi_base>;
 				_overlay_ {
@@ -517,7 +517,7 @@
 					status = "okay";
 				};
 			};
-			/* tegra-camera-platform settings */
+			// tegra-camera-platform settings
 			override@28 {
 				target = <&tcp>;
 				_overlay_ {
@@ -531,7 +531,7 @@
 					isp_bw_margin_pct = <25>;
 				};
 			};
-			/* gpio based i2c mux */
+			// gpio based i2c mux
 			override@29 {
 				target = <&{/cam_i2cmux}>;
 				_overlay_ {
@@ -549,7 +549,7 @@
 				_overlay_ {
 					status = "okay";
 				};
-			};
+			};*/
 		};
 
 		fragement@11 {
