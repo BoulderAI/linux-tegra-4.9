@@ -1,0 +1,2 @@
+#define CAM0_RST_L    TEGRA_MAIN_GPIO(R, 5)
+#define CAM0_PWDN     TEGRA_MAIN_GPIO(N, 2)

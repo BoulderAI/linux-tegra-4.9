@@ -12,10 +12,7 @@
  *
  */
 
-#define CAM0_RST_L	TEGRA_MAIN_GPIO(R, 5)
-#define CAM0_PWDN	TEGRA_MAIN_GPIO(R, 0)
-#define CAM1_RST_L	TEGRA_MAIN_GPIO(R, 1)
-#define CAM1_PWDN	TEGRA_MAIN_GPIO(L, 6)
+#include "t18x-camera-pins-bai.dtsi"
 
 / {
 	gpio@2200000 {
@@ -607,10 +604,8 @@
 					};
 					camera-control-output-low {
 						gpio-hog;
-						gpios = <CAM0_RST_L 0 CAM0_PWDN 0
-							 CAM1_RST_L 0 CAM1_PWDN 0>;
-						label = "cam0-rst", "cam0-pwdn",
-							"cam1-rst", "cam1-pwdn";
+						gpios = <CAM0_RST_L 0 CAM0_PWDN 0>;
+						label = "cam0-rst", "cam0-pwdn";
 						output-low;
 						status = "okay";
 					};
@@ -1220,10 +1215,8 @@
 					};
 					camera-control-output-low {
 						gpio-hog;
-						gpios = <CAM0_RST_L 0 CAM0_PWDN 0
-							 CAM1_RST_L 0 CAM1_PWDN 0>;
-						label = "cam0-rst", "cam0-pwdn",
-							"cam1-rst", "cam1-pwdn";
+						gpios = <CAM0_RST_L 0 CAM0_PWDN 0>;
+						label = "cam0-rst", "cam0-pwdn";
 						output-low;
 						status = "disabled";
 					};
