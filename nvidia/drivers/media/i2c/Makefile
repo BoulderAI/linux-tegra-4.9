@@ -3,6 +3,10 @@ subdir-ccflags-y += -Werror
 ccflags-y += -I$(srctree)/drivers/media/platform/tegra
 ccflags-y += -I$(srctree)/drivers/video/tegra/camera
 
+obj-$(CONFIG_FRAMOS_COMMON) += framos_common.o
+framos_common-objs := framos_sensor_common.o ./../../i2c/framos_i2c_generic.o
+
+obj-$(CONFIG_VIDEO_IMX334) += imx334.o
 obj-$(CONFIG_VIDEO_IMX185) += imx185.o
 obj-$(CONFIG_VIDEO_IMX185) += imx185_v1.o
 obj-$(CONFIG_VIDEO_IMX219) += imx219.o
