@@ -156,7 +156,7 @@
 			nvidia,xbar-ctrl = <0 1 2 3 4>;
 			status = "okay";
 			hdmi-display {
-				status = "okay";
+				status = "disabled";
 			};
 		};
 		dpaux {
