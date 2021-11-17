@@ -44,7 +44,7 @@
 #include "porg-platforms/tegra210-porg-pcie.dtsi"
 #include "porg-platforms/tegra210-porg-prods.dtsi"
 #include "porg-platforms/tegra210-porg-super-module-e2614.dtsi"
-#include "porg-platforms/tegra210-camera-rbpcv2-imx274.dtsi"
+#include "porg-platforms/tegra210-camera-rbpcv2-imx334.dtsi"
 
 / {
         nvidia,boardids = "3448";
