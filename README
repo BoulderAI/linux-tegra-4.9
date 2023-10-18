@@ -1,5 +1,13 @@
         Linux kernel release 4.x <http://kernel.org/>
 
+Sighthound notes:
+
+To apply patches run:
+
+{ git log --pretty=format:'%H' "oe4t-patches-l4t-r32.7.3..sh-oe4t-patches-l4t-r32.7.3"; echo; } | tac > unique_commits.txt
+while read commit; do git cherry-pick $commit; done < unique_commits.txt
+
+
 These are the release notes for Linux version 4.  Read them carefully,
 as they tell you what this is all about, explain how to install the
 kernel, and what to do if something goes wrong.
