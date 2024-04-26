@@ -1,0 +1,61 @@
+/*
+ * tegra210-porg-camera-imx334.dtsi - imx334 sensor device tree
+ *
+ * Copyright (c) 2019. FRAMOS.  All rights reserved.
+ *
+ * This program is free software; you can redistribute it and/or modify it
+ * under the terms and conditions of the GNU General Public License,
+ * version 2, as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+ * FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for
+ * more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#include <t18x-common-modules/tegra186-lanai-camera-imx334-bai.dtsi>
+#include <dt-bindings/clock/tegra186-clock.h>
+
+#define CAM0_RST      TEGRA_MAIN_GPIO(N, 1)
+#define CAM0_PWDN     TEGRA_MAIN_GPIO(N, 3)
+
+/ {
+
+    i2c@3160000 {
+		#address-cells = <1>;
+		#size-cells = <0>;
+		pca9570_a@24 {
+			compatible = "nvidia,pca9570";
+			reg = <0x24>;
+			channel = "a";
+			drive_ic = "DRV8838";
+		};
+
+		imx334_a@1a {
+			/* Define any required hw resources needed by driver */
+			/* ie. clocks, io pins, power sources */
+			clocks = <&tegra_car TEGRA186_CLK_EXTPERIPH1>,
+					 <&tegra_car TEGRA186_CLK_PLLP_OUT0>;
+			clock-names = "extperiph1", "pllp_grtba";
+			mclk = "extperiph1";
+			reset-gpios = <&tegra_main_gpio CAM0_RST GPIO_ACTIVE_HIGH>;
+			pwdn-gpios = <&tegra_main_gpio CAM0_PWDN GPIO_ACTIVE_HIGH>;
+			vana-supply = <&en_vdd_cam_hv_2v8>;
+			vif-supply = <&en_vdd_cam>;
+			vdig-supply = <&en_vdd_cam_1v2>;
+		};
+	};
+
+	gpio@2200000 {
+		camera-control-output-low {
+			gpio-hog;
+			output-low;
+			gpios = <CAM0_RST 0 CAM0_PWDN 0>;
+			label = "cam0-rst","cam0-pwdn";
+		};
+	};
+
+};
