@@ -17,6 +17,7 @@
 #include "common/tegra186-p3509-0000-a00-fixed-regulator.dtsi"
 #include "common/tegra186-p3636-0001-a00-prod.dtsi"
 // #include "common/tegra186-camera-lanai-rbpcv2-imx219.dtsi"
+// #include "t18x-common-platforms/tegra186-cvb-prod-p2597-b00-p3310-1000-a00-00.dtsi"
 #include "t18x-common-platforms/tegra186-lanai-camera-imx334-bai.dtsi"
 
 /* plugin manager */
