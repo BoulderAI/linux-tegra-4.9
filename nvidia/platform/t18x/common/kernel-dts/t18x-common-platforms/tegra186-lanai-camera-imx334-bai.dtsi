@@ -22,7 +22,7 @@
 
 / {
 
-    i2c@3180000 {
+    i2c@c240000 {
 		#address-cells = <1>;
 		#size-cells = <0>;
 		pca9570_a@24 {
