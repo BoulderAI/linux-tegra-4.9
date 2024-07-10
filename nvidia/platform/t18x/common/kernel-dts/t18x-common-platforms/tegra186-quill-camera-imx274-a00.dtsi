@@ -17,7 +17,7 @@
 #include <t18x-common-modules/tegra186-camera-imx274-a00.dtsi>
 #include "dt-bindings/clock/tegra186-clock.h"
 
-#include "t18x-camera-pins-bai.dtsi"
+#include "t186-quill-camera-pins-bai.dtsi"
 #define CAMERA_I2C_MUX_BUS(x) (0x1E + x)
 
 /* camera control gpio definitions */
