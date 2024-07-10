@@ -19,7 +19,7 @@
 #include <t18x-common-modules/tegra186-camera-imx334-bai.dtsi>
 #include <dt-bindings/clock/tegra186-clock.h>
 
-#include "t18x-camera-pins-bai.dtsi"
+#include "t186-quill-camera-pins-bai.dtsi"
 
 / {
 
