@@ -58,6 +58,16 @@
 		nvidia,xusb-padctl = <&xusb_padctl>;
 	};
 
+	sdhci_sd_ext: sdhci@3400000 {
+		mmc-ocr-mask = <0x0>;
+		nvidia,vmmc-always-on;
+		nvidia,vqmmc-always-on;
+		vmmc-supply = <&battery_reg>;
+		vqmmc-supply = <&battery_reg>;
+		status = "okay";
+	};
+
+
 	xhci@3530000 {
 		status = "okay";
 		phys = <&{/xusb_padctl@3520000/pads/usb2/lanes/usb2-0}>,
