@@ -468,7 +468,7 @@
 					/* Declare PCL support driver (classically known as guid)  */
 					pcl_id = "v4l2_sensor";
 					/* Driver v4l2 device name */
-					devname = "imx334 2-001a";
+					devname = "imx334 0-001a";
 					/* Declare the device-tree hierarchy to driver instance */
 					proc-device-tree = "/proc/device-tree/i2c@3160000/imx334_a@1a";
 				};
